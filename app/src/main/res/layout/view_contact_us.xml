@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_contact_us"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_contact_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Fale Conosco • Suporte aos Pais"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Intro Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canal Direto com Nossa Equipe"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Envie sugestões pedagógicas, dúvidas sobre seu cadastro, relatos sobre o aprendizado da sua criança ou questões financeiras."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Form Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categoria do Contato"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- Category Buttons / Chips -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_category_sugestao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_chip_selected"
+                                android:text="Sugestão"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btn_category_cadastro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_chip_unselected"
+                                android:text="Cadastro"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/btn_category_duvida"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_chip_unselected"
+                                android:text="Dúvidas"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/btn_category_financeiro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_chip_unselected"
+                                android:text="Pagamento"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/btn_category_outro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_chip_unselected"
+                                android:text="Outro"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- Subject Input -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Assunto"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_contact_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input_field"
+                        android:hint="Ex: Sugestão de novas histórias"
+                        android:inputType="textCapSentences"
+                        android:paddingHorizontal="14dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="14sp" />
+
+                    <!-- Message Input -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Sua Mensagem"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_contact_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input_field"
+                        android:gravity="top|start"
+                        android:hint="Escreva aqui detalhadamente sua sugestão, dúvida sobre cadastro ou qualquer motivo..."
+                        android:inputType="textMultiLine"
+                        android:padding="14dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="14sp" />
+
+                    <!-- Submit Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_contact_send"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="18dp"
+                        android:backgroundTint="@color/primary"
+                        android:text="Enviar Mensagem"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="25dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- History of Messages -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Minhas Mensagens e Respostas"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/container_contact_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

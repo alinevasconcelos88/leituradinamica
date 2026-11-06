@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Mascote"
+            android:src="@drawable/ic_app_mascot" />
+
+        <TextView
+            android:id="@+id/tv_auth_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Bem-vindo ao Leitura Dinâmica"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_auth_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Acesse sua conta ou faça seu cadastro"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <!-- Tab Selector: Entrar vs Cadastrar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/btn_tab_login"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_chip_selected"
+                android:text="Entrar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_tab_register"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Cadastrar"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Input Email -->
+        <EditText
+            android:id="@+id/et_auth_email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="E-mail (ex: familia@exemplo.com)"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="15sp" />
+
+        <!-- Input Password -->
+        <EditText
+            android:id="@+id/et_auth_password"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Senha (mínimo 6 caracteres)"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="15sp" />
+
+        <!-- Input Password Confirmation (Visible in register mode) -->
+        <EditText
+            android:id="@+id/et_auth_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Confirmar Senha"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- Child Name (Visible in register mode) -->
+        <EditText
+            android:id="@+id/et_auth_child_name"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Nome da Criança (ex: Davi)"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- Forgot Password Link -->
+        <TextView
+            android:id="@+id/tv_auth_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:padding="6dp"
+            android:text="Esqueceu a senha?"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Error / Status message -->
+        <TextView
+            android:id="@+id/tv_auth_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/error"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_auth_submit"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/primary"
+            android:text="Acessar Minha Conta"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="27dp" />
+
+        <!-- Divider OR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/card_stroke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:text="ou continue com"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/card_stroke" />
+        </LinearLayout>
+
+        <!-- Google Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_auth_google"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Entrar com Google"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="27dp"
+            app:icon="@drawable/ic_google"
+            app:iconGravity="textStart"
+            app:iconTint="@null"
+            app:strokeColor="@color/card_stroke" />
+
+        <!-- Demo Mode Quick Access -->
+        <Button
+            android:id="@+id/btn_auth_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/transparent"
+            android:text="Acesso Rápido de Demonstração (Sem Senha)"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_books_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_books_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Livros Infantis Narrados"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escolha uma história com leitura dinâmica:"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <!-- Book 1: O Balão Viajante -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_book_balao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:contentDescription="Capa O Balão Viajante"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_book_story" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="O Balão Viajante"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Uma viagem mágica pelas nuvens, conhecendo novos amigos na natureza."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="📖 4 Páginas • Narração Sincronizada"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_read_book_balao"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginTop="12dp"
+                            android:backgroundTint="@color/primary"
+                            android:text="Ler Agora"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="23dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconGravity="textStart"
+                            app:iconTint="@color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Book 2: A Abelhinha e a Flor -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_book_abelha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:contentDescription="Capa A Abelhinha e a Flor"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_abelha" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A Abelhinha e a Flor"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="A história da abelhinha Mel e o mel mais doce da floresta."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="📖 3 Páginas"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_read_book_abelha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/primary"
+                            android:text="Ler Livro"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconTint="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Book 3: O Cãozinho Pipoca -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_book_pipoca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:contentDescription="Capa O Cãozinho Pipoca"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_gato" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="O Cãozinho Pipoca"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="As travessuras do cachorrinho Pipoca e sua grande aventura no parque."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="📖 4 Páginas"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_read_book_pipoca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/primary"
+                            android:text="Ler Livro"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconTint="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Book 4: O Peixinho Dourado -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_book_peixe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:contentDescription="Capa O Peixinho Dourado"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_peixe" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="O Peixinho Dourado"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Uma jornada mágica pelas águas do oceano com amizade e descobertas."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="📖 4 Páginas"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_read_book_peixe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/primary"
+                            android:text="Ler Livro"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconTint="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Book 5: A Estrelinha Curiosa -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_book_estrela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:contentDescription="Capa A Estrelinha Curiosa"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_estrela" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A Estrelinha Curiosa"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="A linda história da estrelinha Sofia que iluminava os sonhos infantis."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:text="📖 4 Páginas"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_read_book_estrela"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/primary"
+                            android:text="Ler Livro"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconTint="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

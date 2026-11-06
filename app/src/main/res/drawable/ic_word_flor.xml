@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Flower Petals -->
+    <path
+        android:fillColor="#EC4899"
+        android:pathData="M12,4a3,3 0 0,0 -3,3c0,1.66 1.34,3 3,3s3,-1.34 3,-3a3,3 0 0,0 -3,-3zM12,14a3,3 0 0,0 -3,3c0,1.66 1.34,3 3,3s3,-1.34 3,-3a3,3 0 0,0 -3,-3zM7,9a3,3 0 0,0 -3,3c0,1.66 1.34,3 3,3s3,-1.34 3,-3a3,3 0 0,0 -3,-3zM17,9a3,3 0 0,0 -3,3c0,1.66 1.34,3 3,3s3,-1.34 3,-3a3,3 0 0,0 -3,-3z"/>
+    <!-- Center -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,12m-2.5,0a2.5,2.5 0 1,0 5,0a2.5,2.5 0 1,0 -5,0"/>
+    <!-- Stem -->
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M11,19h2v4h-2z"/>
+</vector>

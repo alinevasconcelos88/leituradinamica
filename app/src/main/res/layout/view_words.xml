@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_words"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_words_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Palavras Mágicas"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_words_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="1 / 12"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Main Word Flashcard -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Category badge -->
+                    <TextView
+                        android:id="@+id/tv_word_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_chip_selected"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="4dp"
+                        android:text="Transportes"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Exact Associated Image -->
+                    <ImageView
+                        android:id="@+id/img_word_picture"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="Imagem da Palavra"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_aviao" />
+
+                    <!-- Word text -->
+                    <TextView
+                        android:id="@+id/tv_word_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:letterSpacing="0.05"
+                        android:text="AVIÃO"
+                        android:textColor="@color/primary"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
+                    <!-- Syllable breakdown -->
+                    <TextView
+                        android:id="@+id/tv_word_syllables"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="A - VI - ÃO"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Example Sentence -->
+                    <TextView
+                        android:id="@+id/tv_word_sentence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="3dp"
+                        android:text="O avião voa alto pelo céu azul."
+                        android:textAlignment="center"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="15sp" />
+
+                    <!-- Audio controls -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_word_speak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="52dp"
+                            android:backgroundTint="@color/primary"
+                            android:paddingHorizontal="22dp"
+                            android:text="Ouvir Palavra"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="26dp"
+                            app:icon="@drawable/ic_volume"
+                            app:iconTint="@color/white" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_word_speak_sentence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="52dp"
+                            android:layout_marginStart="10dp"
+                            android:backgroundTint="@color/secondary"
+                            android:paddingHorizontal="18dp"
+                            android:text="Ouvir Frase"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="26dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconTint="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Navigation Controls: Anterior & Próxima -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_word_prev"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="Anterior"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="25dp"
+                    app:icon="@drawable/ic_arrow_back"
+                    app:iconTint="@color/text_primary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_word_next"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:text="Próxima"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="25dp"
+                    app:icon="@drawable/ic_arrow_forward"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

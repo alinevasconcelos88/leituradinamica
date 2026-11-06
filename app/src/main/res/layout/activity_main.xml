@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 0: Splash -->
+        <include layout="@layout/view_splash" />
+
+        <!-- 1: Auth (Login / Cadastro) -->
+        <include layout="@layout/view_auth" />
+
+        <!-- 2: Onboarding -->
+        <include layout="@layout/view_onboarding" />
+
+        <!-- 3: Menu Principal -->
+        <include layout="@layout/view_main_menu" />
+
+        <!-- 4: Alfabeto -->
+        <include layout="@layout/view_alphabet" />
+
+        <!-- 5: Palavras -->
+        <include layout="@layout/view_words" />
+
+        <!-- 6: Frases -->
+        <include layout="@layout/view_sentences" />
+
+        <!-- 7: Jogos Hub -->
+        <include layout="@layout/view_games" />
+
+        <!-- 8: Jogo da Memória -->
+        <include layout="@layout/view_game_memory" />
+
+        <!-- 9: Jogo Complete a Palavra -->
+        <include layout="@layout/view_game_fill_letter" />
+
+        <!-- 10: Jogo Qual é a Imagem -->
+        <include layout="@layout/view_game_pick_image" />
+
+        <!-- 11: Lista de Livros -->
+        <include layout="@layout/view_books_list" />
+
+        <!-- 12: Leitura do Livro (Dinâmica Sincronizada) -->
+        <include layout="@layout/view_book_reader" />
+
+        <!-- 13: Minha Evolução -->
+        <include layout="@layout/view_evolution" />
+
+        <!-- 14: Portão dos Pais (Desafio de Segurança) -->
+        <include layout="@layout/view_parent_gate" />
+
+        <!-- 15: Painel dos Responsáveis -->
+        <include layout="@layout/view_parent_dashboard" />
+
+        <!-- 16: Fale Conosco -->
+        <include layout="@layout/view_contact_us" />
+
+        <!-- 17: Painel do Administrador -->
+        <include layout="@layout/view_admin_dashboard" />
+
+    </ViewFlipper>
+
+</FrameLayout>

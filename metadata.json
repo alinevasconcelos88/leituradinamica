@@ -1,0 +1,6 @@
+{
+  "name": "Leitura Dinâmica",
+  "description": "Aplicativo educacional para desenvolvimento da alfabetização e leitura infantil com atividades lúdicas, narração com velocidade ajustável e área dos responsáveis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

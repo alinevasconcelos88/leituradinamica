@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_book_reader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_reader_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tv_reader_book_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="O Balão Viajante"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Speech speed pill indicator -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reader_speed_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="@color/primary"
+            android:text="1.0x"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="19dp"
+            app:icon="@drawable/ic_speed"
+            app:iconTint="@color/white"
+            app:iconSize="16dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Page Illustration Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:id="@+id/img_reader_illustration"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Ilustração da Página"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_book_story" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Page Counter Badge -->
+            <TextView
+                android:id="@+id/tv_reader_page_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="4dp"
+                android:text="Página 1 de 4"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <!-- Synchronized Text Reading Box -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_reader_synchronized_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="10dp"
+                        android:text="Era uma vez um balão colorido que adorava viajar pelo céu."
+                        android:textColor="@color/text_primary"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <!-- Synchronized Status Hint -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:contentDescription="Destaque"
+                            android:src="@drawable/ic_volume"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:id="@+id/tv_reader_status_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="Toque em Play para ouvir o áudio com destaque sincronizado"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Audio Player Control Bar -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:cardBackgroundColor="@color/primary_container"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <!-- Replay Button -->
+                    <ImageButton
+                        android:id="@+id/btn_reader_replay"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Repetir Leitura"
+                        android:src="@drawable/ic_replay"
+                        app:tint="@color/primary_dark" />
+
+                    <!-- Play / Pause FAB -->
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_reader_play_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:contentDescription="Tocar Narração"
+                        android:src="@drawable/ic_play"
+                        app:backgroundTint="@color/primary"
+                        app:fabSize="normal"
+                        app:tint="@color/white" />
+
+                    <!-- Speed Cycle Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_reader_speed_cycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:backgroundTint="@color/secondary"
+                        android:text="Velocidade"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="22dp"
+                        app:icon="@drawable/ic_speed"
+                        app:iconTint="@color/white" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bottom Navigation: Página Anterior / Próxima Página -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_reader_prev_page"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="Página Anterior"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:cornerRadius="25dp"
+                    app:icon="@drawable/ic_arrow_back" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_reader_next_page"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:text="Próxima Página"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="25dp"
+                    app:icon="@drawable/ic_arrow_forward"
+                    app:iconGravity="textEnd" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

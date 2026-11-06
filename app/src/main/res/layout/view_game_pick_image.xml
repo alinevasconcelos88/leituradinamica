@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_game_pick_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_pick_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Qual é a Imagem?"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_pick_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_selected"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="+20 pts"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ouça o som e toque na figura certa:"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+
+            <!-- Spoken Word Banner -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/tertiary_container"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:id="@+id/tv_pick_word_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toque na: FLOR 🌸"
+                        android:textColor="@color/on_tertiary_container"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_pick_speak_again"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/tertiary"
+                        android:text="Ouvir Novamente"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="22dp"
+                        app:icon="@drawable/ic_volume" />
+
+                    <TextView
+                        android:id="@+id/tv_pick_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/success"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 3 Image Options Grid/Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pick_opt_0"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp">
+
+                    <ImageView
+                        android:id="@+id/img_pick_opt_0"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Opção 1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_aviao" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pick_opt_1"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp">
+
+                    <ImageView
+                        android:id="@+id/img_pick_opt_1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Opção 2"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_flor" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pick_opt_2"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp">
+
+                    <ImageView
+                        android:id="@+id/img_pick_opt_2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Opção 3"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_bola" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_pick_next_round"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/tertiary"
+                android:text="Próximo Desafio"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="26dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

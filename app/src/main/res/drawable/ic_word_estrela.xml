@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Smiling Star -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,17.27L18.18,21l-1.64,-7.03L22,9.24l-7.19,-0.61L12,2 9.19,8.63 2,9.24l5.46,4.73L5.82,21z"/>
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M10,11m-0.8,0a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M14,11m-0.8,0a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0"/>
+</vector>

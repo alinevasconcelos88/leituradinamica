@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_onboarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Top Skip Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_onboarding_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Pular"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Main Card Content -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="16dp"
+        app:cardBackgroundColor="@color/surface"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/img_onboarding_art"
+                android:layout_width="220dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="Ilustração Onboarding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_hero_reading" />
+
+            <TextView
+                android:id="@+id/tv_onboarding_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Aprenda Letras e Palavras"
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_onboarding_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="4dp"
+                android:text="Atividades interativas que associam letra, imagem, som e pronúncia de forma lúdica e acolhedora."
+                android:textAlignment="center"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Slide indicator dots -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/dot_onboarding_1"
+            android:layout_width="24dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/bg_chip_selected" />
+
+        <View
+            android:id="@+id/dot_onboarding_2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/bg_letter_badge" />
+
+        <View
+            android:id="@+id/dot_onboarding_3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/bg_letter_badge" />
+    </LinearLayout>
+
+    <!-- Bottom Buttons: Voltar & Próximo / Começar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_onboarding_prev"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Voltar"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:cornerRadius="26dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_onboarding_next"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1.5"
+            android:backgroundTint="@color/primary"
+            android:text="Próximo"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="26dp" />
+    </LinearLayout>
+
+</LinearLayout>

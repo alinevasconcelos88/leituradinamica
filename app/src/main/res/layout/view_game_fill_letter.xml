@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_game_fill_letter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_fill_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Complete a Palavra"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_fill_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_selected"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="+20 pts"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card Question -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <ImageView
+                        android:id="@+id/img_fill_picture"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:contentDescription="Figura do Jogo"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_word_gato" />
+
+                    <TextView
+                        android:id="@+id/tv_fill_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:letterSpacing="0.1"
+                        android:text="G _ T O"
+                        android:textColor="@color/primary"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_fill_hear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/primary"
+                        android:text="Ouvir Palavra"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="22dp"
+                        app:icon="@drawable/ic_volume"
+                        app:iconTint="@color/white" />
+
+                    <!-- Feedback Banner -->
+                    <TextView
+                        android:id="@+id/tv_fill_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/success"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Qual é a letra que completa?"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+
+            <!-- 3 Options Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fill_opt_1"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:text="E"
+                    android:textColor="@color/white"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="18dp"
+                    app:elevation="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fill_opt_2"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:text="A"
+                    android:textColor="@color/white"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="18dp"
+                    app:elevation="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fill_opt_3"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:text="U"
+                    android:textColor="@color/white"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="18dp"
+                    app:elevation="4dp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_fill_next_round"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/primary"
+                android:text="Próxima Palavra"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="26dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

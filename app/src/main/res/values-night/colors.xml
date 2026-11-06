@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#3B82F6</color>
+    <color name="primary_dark">#60A5FA</color>
+    <color name="primary_container">#1E3A8A</color>
+    <color name="on_primary_container">#DBEAFE</color>
+
+    <color name="secondary">#6366F1</color>
+    <color name="secondary_dark">#818CF8</color>
+    <color name="secondary_container">#312E81</color>
+    <color name="on_secondary_container">#E0E7FF</color>
+
+    <color name="tertiary">#10B981</color>
+    <color name="tertiary_dark">#34D399</color>
+    <color name="tertiary_container">#064E3B</color>
+    <color name="on_tertiary_container">#D1FAE5</color>
+
+    <!-- High-contrast colorful accents for dark mode -->
+    <color name="accent_purple">#A78BFA</color>
+    <color name="accent_purple_dark">#C4B5FD</color>
+    <color name="accent_purple_light">#2E1065</color>
+    
+    <color name="accent_pink">#F472B6</color>
+    <color name="accent_pink_light">#500724</color>
+    
+    <color name="accent_amber">#F59E0B</color>
+    <color name="accent_amber_light">#451A03</color>
+    <color name="accent_yellow">#FBBF24</color>
+    <color name="accent_yellow_light">#451A03</color>
+
+    <!-- Menu Grid Card Backgrounds in dark mode -->
+    <color name="menu_card_games_bg">#451A03</color>
+    <color name="menu_card_games_title">#FEF3C7</color>
+    <color name="menu_card_games_subtitle">#FDE68A</color>
+    <color name="menu_card_games_icon">#F59E0B</color>
+
+    <color name="menu_card_books_bg">#500724</color>
+    <color name="menu_card_books_title">#FCE7F3</color>
+    <color name="menu_card_books_subtitle">#FBCFE8</color>
+    <color name="menu_card_books_icon">#F472B6</color>
+
+    <color name="menu_card_evolution_bg">#2E1065</color>
+    <color name="menu_card_evolution_title">#EDE9FE</color>
+    <color name="menu_card_evolution_subtitle">#DDD6FE</color>
+    <color name="menu_card_evolution_icon">#A78BFA</color>
+
+    <!-- Dedicated button colors -->
+    <color name="button_blue">#2563EB</color>
+    <color name="button_indigo">#4F46E5</color>
+    <color name="button_purple">#7C3AED</color>
+    <color name="button_teal">#0D9488</color>
+    <color name="button_emerald">#059669</color>
+
+    <!-- Reading highlight -->
+    <color name="highlight_reading">#0284C7</color>
+    <color name="highlight_reading_dark">#38BDF8</color>
+
+    <!-- Dark Theme Backgrounds & Surfaces -->
+    <color name="background">#0F172A</color>
+    <color name="surface">#1E293B</color>
+    <color name="surface_variant">#334155</color>
+    <color name="card_stroke">#334155</color>
+
+    <!-- Crisp high-contrast text on dark backgrounds -->
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#CBD5E1</color>
+    <color name="text_hint">#94A3B8</color>
+
+    <color name="success">#22C55E</color>
+    <color name="error">#EF4444</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

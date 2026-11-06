@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1D4ED8</color>
+    <color name="primary_dark">#1E3A8A</color>
+    <color name="primary_container">#DBEAFE</color>
+    <color name="on_primary_container">#1E3A8A</color>
+
+    <!-- Deep vivid Indigo for secondary actions - high contrast, never washed-out yellow -->
+    <color name="secondary">#4338CA</color>
+    <color name="secondary_dark">#312E81</color>
+    <color name="secondary_container">#E0E7FF</color>
+    <color name="on_secondary_container">#1E1B4B</color>
+
+    <!-- Deep vivid Emerald green -->
+    <color name="tertiary">#047857</color>
+    <color name="tertiary_dark">#064E3B</color>
+    <color name="tertiary_container">#D1FAE5</color>
+    <color name="on_tertiary_container">#064E3B</color>
+
+    <!-- High-contrast colorful accents -->
+    <color name="accent_purple">#7C3AED</color>
+    <color name="accent_purple_dark">#5B21B6</color>
+    <color name="accent_purple_light">#EDE9FE</color>
+    
+    <color name="accent_pink">#DB2777</color>
+    <color name="accent_pink_light">#FCE7F3</color>
+    
+    <color name="accent_amber">#B45309</color>
+    <color name="accent_amber_light">#FEF3C7</color>
+    <color name="accent_yellow">#92400E</color>
+    <color name="accent_yellow_light">#FEF3C7</color>
+
+    <!-- Menu Grid Card Backgrounds with guaranteed high-contrast colors -->
+    <color name="menu_card_games_bg">#FEF3C7</color>
+    <color name="menu_card_games_title">#92400E</color>
+    <color name="menu_card_games_subtitle">#B45309</color>
+    <color name="menu_card_games_icon">#D97706</color>
+
+    <color name="menu_card_books_bg">#FCE7F3</color>
+    <color name="menu_card_books_title">#831843</color>
+    <color name="menu_card_books_subtitle">#BE185D</color>
+    <color name="menu_card_books_icon">#DB2777</color>
+
+    <color name="menu_card_evolution_bg">#EDE9FE</color>
+    <color name="menu_card_evolution_title">#4C1D95</color>
+    <color name="menu_card_evolution_subtitle">#6D28D9</color>
+    <color name="menu_card_evolution_icon">#7C3AED</color>
+
+    <!-- Dedicated button colors with guaranteed high-contrast white text -->
+    <color name="button_blue">#1D4ED8</color>
+    <color name="button_indigo">#4338CA</color>
+    <color name="button_purple">#6D28D9</color>
+    <color name="button_teal">#0F766E</color>
+    <color name="button_emerald">#047857</color>
+
+    <!-- Reading highlight: soft crisp sky blue with high contrast navy text -->
+    <color name="highlight_reading">#BAE6FD</color>
+    <color name="highlight_reading_dark">#0C4A6E</color>
+
+    <color name="background">#F8FAFC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+    <color name="card_stroke">#CBD5E1</color>
+
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#334155</color>
+    <color name="text_hint">#64748B</color>
+
+    <color name="success">#15803D</color>
+    <color name="error">#DC2626</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
